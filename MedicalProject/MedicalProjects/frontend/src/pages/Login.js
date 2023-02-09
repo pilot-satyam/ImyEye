@@ -76,8 +76,8 @@ const handleForSubmit = (event) =>{
     return(
         <Base>
         <div classNmae='bg-dark'>
-       <Container className='mt-5 text-center '>
-         <Row className='mt-4 '>
+       <Container className='mt-4  text-center '>
+         <Row className='' >
             <Col sm={{
                 size:8
             }}>
@@ -87,19 +87,21 @@ const handleForSubmit = (event) =>{
                     <div className="hero-section-image imageCenter">
             
                     <img
+                      id='img_id'
                       src="contact.jpg"
                       alt="hero-section-photo"
                       className="img-style  float-left"
                       style={{
-                        width:"80vh",
-                        marginRight:"7%"
+                        width:"35rem",
+                        marginRight:"-1.8%"
+                        
                        }} 
                       />
                 
                 </div>
                     </Col>
                     <Col sm={5} id='patient_login_id'>
-                    <CardHeader className='mt-4 formStyle'>
+                    <CardHeader className=' formStyle'>
                     <h3 className="centerIt">Login Here</h3>
                     <i style={{fontSize:"24px"}} className="fa centerIt">&#xf2bc;</i>
                 </CardHeader>
@@ -130,7 +132,7 @@ const handleForSubmit = (event) =>{
                   
                 <Container className='text-center'>
                     <Button color="dark" outline>Login</Button>
-                    <Button onClick={handleForReset} className='ms-2' color='secondary' outline>Reset</Button>
+                    <Button onClick={handleForReset} className='ms-2 dark' color='dark' outline>Reset</Button>
                     <Button className='ms-2' color='dark' outline href='./Signup'>New Patient? Register Here</Button>
                 </Container>
 
