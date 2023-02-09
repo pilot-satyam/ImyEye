@@ -1,0 +1,39 @@
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .testimonial {
+    width: 200px;
+    height: 400px;
+    margin: 10px;
+    background-color: #b9afca;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .testimonial:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  .testimonial img {
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    border-radius: 50%;
+  }
+  
+  .testimonial p.text {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .testimonial p.author {
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  

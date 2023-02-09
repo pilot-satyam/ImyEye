@@ -1,0 +1,30 @@
+package com.ImyEye.info.Security;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+// import com.ImyEye.info.entities.Doctor;
+import com.ImyEye.info.entities.User;
+import com.ImyEye.info.exceptions.ResourceNotFoundException;
+// import com.ImyEye.info.repositories.DoctorRepo;
+import com.ImyEye.info.repositories.UserRepo;
+
+@Service
+public class CustomUserDetailService implements UserDetailsService{
+
+    @Autowired
+    private UserRepo userRepo;
+    // @Autowired
+    // private DoctorRepo doctorRepo;
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        
+     //loading user from db by username
+      User user  =  this.userRepo.findByEmail(username).orElseThrow(()-> new ResourceNotFoundException("User", "email"+username, 0));
+    //   Doctor doctor  =  this.doctorRepo.findByEmail(username).orElseThrow(()-> new ResourceNotFoundException("Doctor", "email"+username, 0));
+        return user;
+    }
+}

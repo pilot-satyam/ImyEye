@@ -1,0 +1,14 @@
+
+
+@media (max-width:1000px){
+    #login_details{width:100%;
+    }
+
+    #image_id{
+        /* margin-left: 45em; */
+    }
+
+    #patient_login_id{
+        width:100%;
+    }
+}

@@ -1,0 +1,270 @@
+
+.button {
+
+  align-items: center;  
+
+  background-color: #a48bd3;
+
+  border-radius: 5ch;
+
+}
+
+
+.button:hover{
+  border-radius: 5ch;
+  border-color: rgb(46, 3, 87);
+  transform:scale(1.05);
+}
+
+.hero-section-image {
+  /* width: 100%; */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.img-style {
+  /* width: 100%;
+  height: auto; */
+  width: 850px;
+  height: 600px;
+  margin-left: 500px;
+}
+ /* this for the center the text */
+.parent {
+  display: flex;
+  align-items: center; /* center items vertically */
+  justify-content: center; /* center items horizontally */
+}
+  body {
+    background-color: #e3e8f3;
+    background-image: url('../../public/body.jpg');
+    color: rgb(0, 0, 0);
+    padding: 40px;
+    font-family: 'Arvo', serif;
+    font-family: 'Mukta', sans-serif;
+   
+      /* overflow-x: hidden; */
+    
+      /* display: table-cell;
+      vertical-align: middle; */
+
+
+      
+      justify-content:center;
+      
+  
+    
+  }
+
+  .body{
+    background-image: url('../../public/body.jpg');
+  }
+  .space{
+    display: inline-block;
+  }
+
+  .centerIt{
+    text-align: center;
+  }
+  .centerTable{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  }
+
+  table {
+    border-spacing: 20px;
+    text-align: center;
+    
+  }
+  td {
+   
+    padding: 10px;
+   
+  }
+  .slideStyles {
+    width: "100%";
+    height :"auto";
+    border-radius: "10px";
+    background-size: "cover";
+    background-position: "center";
+  };
+  
+
+  h1{
+    text-align: center;
+  }
+  .fontFamily{
+    font-family: 'Mukta', sans-serif;
+  }
+
+  .col-container {
+    display: table; 
+    width: 100%; 
+  }
+  
+  .col {
+    display: table-cell; 
+  }
+  .bg1{
+    background-color: #a490ca;
+  }
+  .bg2{
+    background-color: #7657b1;
+  }
+
+
+  .nav { 
+    display: inline-block;
+  }
+ 
+  .imageCenter{
+    display: grid;
+    place-items: center;
+    margin-right: 500px;
+  }
+
+  .footer{
+    left:0; 
+    bottom:0; 
+    width:100vw;
+  }
+
+/* .styleH1 {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 2px 2px #ccc;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    background: linear-gradient(to right, #7637c2,#bb86fc); */
+    /* -webkit-background-clip: */
+/* }  */
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+}
+
+.formStyle{
+  background-image: url('../../public/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+.NewFeed {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.doctors-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.doctor-card {
+  width: 30%;
+  margin: 0 1.5%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.newFeedStyle{
+  background-image: url('../../public/background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* this style is being applied for the Grid page */
+
+.slide {
+  animation: slide 0.5s ease-in-out;
+}
+@keyframes slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+
+
+
+}
+
+.icon-container:hover .icon {
+  transform: scale(1.2); /* Increase the size of the icon by 20% */
+}
+hr {
+  width: 80%; /* set the width of the hr tag */
+  height: 4px;
+  margin: 10px auto; /* center the hr tag horizontally */
+  background: linear-gradient(to right, #f7f7f7, #fff);
+  border: none;
+}
+
+
+/* NavBar styling */
+
+nav .nav-content {
+  transition: transform 0.5s ease-in-out; /* add a transition for the scale effect */
+}
+
+nav:hover .nav-content {
+  transform: scale(2.2); /* Increase the size of the navbar content by 20% */
+}
+
+/* //for the contact us page */
+.contact{
+  background-image: url('../../public/Image1.jpg');
+
+}
+
+
+
+/* //css added for the News&EVent Page */
+
+.news-events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+.section {
+  width: 300px;
+  height: 400px;
+  margin: 20px;
+  background-color: #a490ca;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.section ul {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.section li {
+  font-size: 18px;
+  margin: 10px 0;
+}

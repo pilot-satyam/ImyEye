@@ -1,0 +1,9 @@
+
+.align {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+  }
+  .input{
+    display: inline-block;
+  }

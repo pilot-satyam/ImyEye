@@ -1,0 +1,39 @@
+.navbar {
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    transition: background-color 0.5s ease-in-out;
+  }
+  
+  .navbar a {
+    color: black;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  .navbar-dark {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    transition: background-color 0.5s ease-in-out;
+  }
+  
+  .navbar-dark a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  .navbar:hover {
+    background-color: #d1c6c6;
+  }
+  
+  .navbar-dark:hover {
+    background-color: rgb(83, 81, 81);
+  }
+  

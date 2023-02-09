@@ -1,0 +1,17 @@
+.contact-page {
+    background-size: cover;
+    background-position: center;
+    transform: skewY(-6deg);
+  }
+  .form-container {
+    /* background-image: background.jpg; */
+    background-size: cover;
+    background-position: center;
+    transform: skew(10deg);
+  }
+  .form {
+    transform: skew(-10deg);
+  }
+  .form-container p, .form-container input {
+    transform: skew(-10deg);
+  }
