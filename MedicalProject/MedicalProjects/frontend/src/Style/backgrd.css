@@ -4,7 +4,7 @@
     transform: skewY(-6deg);
   }
   .form-container {
-    /* background-image: background.jpg; */
+    background-image: url("../../../frontend/public/background.jpg");
     background-size: cover;
     background-position: center;
     transform: skew(10deg);
