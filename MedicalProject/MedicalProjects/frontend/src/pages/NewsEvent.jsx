@@ -12,6 +12,10 @@ export default function NewsEvent() {
         fontSize:'50px',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
+
+        marginLeft:'-3.234rem',
+        width:'93.79rem',
+
   }
 
   const handleMouseEnter = () => {
