@@ -13,8 +13,8 @@ export default function NewsEvent() {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
 
-        marginLeft:'-3.234rem',
-        width:'93.79rem',
+        // marginLeft:'-3.234rem',
+        // width:'93.79rem',
 
   }
 
