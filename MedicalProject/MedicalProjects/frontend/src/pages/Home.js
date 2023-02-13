@@ -48,7 +48,6 @@ function Home() {
             <Content myData={data} />
         </div>
         
-=======
         <div>
           <Grid/>
         </div>

@@ -39,6 +39,7 @@ import MoreDetails from './pages/MoreDetails';
 import UserFeed from './pages/UsersList/UserFeed';
 import SingleUserVisible from './pages/UsersList/SingleUserVisible';
 import PrescriptionFeed from './pages/PrescriptionList/PrescriptionFeed';
+import Address2 from './pages/Address2';
 
 
 function App() {
@@ -67,6 +68,7 @@ function App() {
   <Route exact path="/services" element={<Services />} />
   <Route exact path="/contactUs" element={<Contact />}/>
   <Route exact path="/address" element={<Address/>}/>  
+  <Route path ="/branch2" element={<Address2/>}/>
   <Route exact path="/symptomForm" element={<PatientInformation/>}/>
   <Route exact path="/patientDetails" element={<PatientDetails/>}/>
   <Route exact path ="/patientProblemDetails" element={<PatientProblemDetails/>}/>
