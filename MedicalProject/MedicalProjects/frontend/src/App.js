@@ -41,6 +41,7 @@ import UserFeed from './pages/UsersList/UserFeed';
 import SingleUserVisible from './pages/UsersList/SingleUserVisible';
 import PrescriptionFeed from './pages/PrescriptionList/PrescriptionFeed';
 import Address2 from './pages/Address2';
+import DemoLogin from './pages/DemoLogin'
 
 
 function App() {
@@ -53,7 +54,7 @@ function App() {
   <Routes>   
   <Route path="/" element={<Home />} />    
   <Route  path="/home" element= {<Home />} />
-  <Route exact path="/login" element= {<Login />} />
+  <Route exact path="/login" element= {<DemoLogin />} />
   <Route exact path ="/signup" element={<Signup />} />
   <Route exact path="/physicianlogin" element={<PhysicianLogin />} />
   <Route exact path="/doctorsignup" element={<DoctorSignup />} />

@@ -71,11 +71,102 @@
   .centerIt{
     text-align: center;
   }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+  }
   .centerTable{
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
   }
+  /* //card Stylling  */
+
+  .cardStyle {
+    width: 350px;
+    height: 450px;
+    background: rgb(223, 225, 235);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+   }
+
+/* //Form stylling  */
+
+
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  padding: 2.5em;
+  border-radius: 25px;
+  transition: .4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 1px 2px 2px;
+}
+
+.formLogin:hover {
+  transform: translateX(-0.5em) translateY(-0.5em);
+  border: 1px solid #171717;
+  box-shadow: 10px 10px 0px #666666;
+}
+
+.heading {
+  color: black;
+  padding-bottom: 2em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.inputLogin{
+  border-radius: 5px;
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  outline: none;
+  padding: 0.7em;
+  transition: .4s ease-in-out;
+}
+
+.inputLogin:hover {
+  box-shadow: 6px 6px 0px #969696,
+             -3px -3px 10px #ffffff;
+}
+
+.inputLogin:focus {
+  background: #ffffff;
+  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+}
+
+.formLogin .btnLogin {
+  margin-top: 2em;
+  align-self: center;
+  padding: 0.7em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 10px;
+  border: none;
+  color: black;
+  transition: .4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
+}
+
+.formLogin .btnLogin:hover {
+  box-shadow: 6px 6px 0px #969696,
+             -3px -3px 10px #ffffff;
+  transform: translateX(-0.5em) translateY(-0.5em);
+}
+
+.formLogin .btnLogin:active {
+  transition: .2s;
+  transform: translateX(0em) translateY(0em);
+  box-shadow: none;
+}
+
+
+
+
 
   table {
     border-spacing: 20px;
