@@ -85,7 +85,7 @@ function App() {
   <Route path='/feedplusmenu' element={<FeedPlusMenu/>} />
   <Route path='/feedplusmenu/:doctorId' element={<MoreDetails/>} />
   <Route path="/users" element={<UserFeed/>} />
-  {/* <Route path="/prescriptions/:Id" element={<PrescriptionFeed />} /> */}
+  <Route path="/prescriptions/:Id" element={<PrescriptionFeed />} />
 
   <Route path="/user" element={<PrivateRoute />} >
   <Route path="dashboard" element={<UserDashboard />} />
