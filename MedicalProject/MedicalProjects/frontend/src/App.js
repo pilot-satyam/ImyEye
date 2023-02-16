@@ -40,7 +40,8 @@ import UserFeed from './pages/UsersList/UserFeed';
 import SingleUserVisible from './pages/UsersList/SingleUserVisible';
 import PrescriptionFeed from './pages/PrescriptionList/PrescriptionFeed';
 import Address2 from './pages/Address2';
-import DemoLogin from './pages/DemoLogin'
+import DemoLogin from './pages/DemoLogin';
+import DemoPhysicianLogin from './pages/DemoPhysicianLogin';
 
 
 function App() {
@@ -55,7 +56,7 @@ function App() {
   <Route  path="/home" element= {<Home />} />
   <Route exact path="/login" element= {<DemoLogin />} />
   <Route exact path ="/signup" element={<Signup />} />
-  <Route exact path="/physicianlogin" element={<PhysicianLogin />} />
+  <Route exact path="/physicianlogin" element={<DemoPhysicianLogin />} />
   <Route exact path="/doctorsignup" element={<DoctorSignup />} />
   <Route exact path="/editProfile" element={<Edit/>}/>
 

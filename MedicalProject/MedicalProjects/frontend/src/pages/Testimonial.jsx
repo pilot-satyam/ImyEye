@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "../Style/Testimonials.css"
 
 const Testimonial = ({ author, text, image }) => (
-  <div className="testimonial">
+  <div className="testimonial cardGridLight">
     <img src={image} alt={author} />
     <p className="author">{author}</p>
     <p className="text">{text}</p>
@@ -20,7 +20,7 @@ const Testimonials = () => {
   ]);
 
   return (
-    <div className="testimonials">
+    <div className="testimonials mb-5">
       {testimonials.map((testimonial, index) => (
         <Testimonial
           key={index}
@@ -29,6 +29,7 @@ const Testimonials = () => {
           image={testimonial.image}
         />
       ))}
+      
     </div>
   );
 };

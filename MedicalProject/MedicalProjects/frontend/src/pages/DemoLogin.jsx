@@ -106,7 +106,7 @@ const handleForSubmit = (event) =>{
                     <h3 className="center">Login Here</h3>
                     <i style={{fontSize:"24px"}} className="fa center">&#xf2bc;</i>
                 </CardHeader>
-          <MDBCardBody className='p-5'>
+          <MDBCardBody className='p-4'>
 
  
                 <CardBody>
