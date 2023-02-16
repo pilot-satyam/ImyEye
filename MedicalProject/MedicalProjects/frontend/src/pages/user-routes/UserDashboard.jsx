@@ -8,6 +8,7 @@ import AddPrescription from '../../Components/AddPrescription'
 import Base from '../../Components/Base'
 import { loadPrescriptionUserWise } from '../../services/prescription-service'
 import Doctor from '../DoctorList/Doctor'
+import Home from '../Home'
 import User from '../UsersList/User'
 
 const UserDashboard =()=>{
@@ -34,8 +35,9 @@ const UserDashboard =()=>{
    <Base>
     <Container>
       {/* <ProfileInfo /> */}
-      <AddPrescription />
-      <h1 className='my-3'>Count({prescription.length})</h1>
+      {/* <AddPrescription /> */}
+      <Home /> 
+      {/* <h1 className='my-3'>Count({prescription.length})</h1>
       {
         prescription.map((prescription,index)=>{
           return(
@@ -43,7 +45,7 @@ const UserDashboard =()=>{
             <Doctor prescription={prescription} key={index} />
           )
         })
-      }
+      } */}
    </Container>
    </Base>
   )

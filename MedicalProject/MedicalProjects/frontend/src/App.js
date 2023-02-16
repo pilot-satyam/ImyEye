@@ -29,6 +29,7 @@ import AddPrescription from './Components/AddPrescription';
 import Doctors from './pages/Doctors';
 import { AppointmentPage } from './pages/AppointmentPage/AppoitmentPage';
 import Edit from './pages/Edit'
+import { Navigate } from 'react-router-dom';
 
 import NewsEvent from './pages/NewsEvent';
 
@@ -91,7 +92,6 @@ function App() {
   <Route path="/user" element={<PrivateRoute />} >
   <Route path="dashboard" element={<UserDashboard />} />
   <Route path="profile-info/:userId" element={<ProfileInfo />} />
-
   </Route>
    </Routes>
   <FooterOne />
