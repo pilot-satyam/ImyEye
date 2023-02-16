@@ -67,6 +67,9 @@ public class User implements UserDetails {
      @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
      List<Prescription> lists = new ArrayList<>();
 
+     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+     List<Appointment> appointmentlist = new ArrayList<>();
+
 
      @ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
      @JoinTable(name="user_role",joinColumns = @JoinColumn(name="user",referencedColumnName = "Id"),

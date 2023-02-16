@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="" th:action="@{/send-otp}">
+        <h1>OTP SENT SUCCESSFULLY TO YOUR EMAIL ID</h1>
+        <div class="form-group">
+
+            <input
+            type="text" 
+            placeholder="enter otp here"
+            name="otp"
+            required="required" 
+            class="form-control"
+            />
+        </div><br>
+        <div class="container">
+            <button class="btn btn-warning">Verify OTP</button>
+        </div>
+    </form>
+</body>
+</html>

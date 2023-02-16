@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <div th:if="${session.message}" class="container">
+        <div class="alert alert-danger" role="alert">
+            <span th:text="${session.message}"></span>
+        </div>
+        <th:block th:text="${#session.removeAttribute('message')}"></th:block>
+    </div>
+    <form method="post" action="" th:action="@{/send-otp}">
+        <div class="form-group">
+            <input
+            type="email" 
+            placeholder="enter email here"
+            name="email" 
+            class="form-control"
+            />
+        </div><br>
+        <div class="container">
+            <button class="btn btn-warning">Send OTP</button>
+        </div>
+    </form>
+</body>
+</html>

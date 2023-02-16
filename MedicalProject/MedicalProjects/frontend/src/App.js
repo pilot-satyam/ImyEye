@@ -42,6 +42,7 @@ import SingleUserVisible from './pages/UsersList/SingleUserVisible';
 import PrescriptionFeed from './pages/PrescriptionList/PrescriptionFeed';
 import Address2 from './pages/Address2';
 import DemoLogin from './pages/DemoLogin'
+import Forgot from './pages/Forgot/Forgot';
 
 
 function App() {
@@ -87,6 +88,7 @@ function App() {
   <Route path='/feedplusmenu/:doctorId' element={<MoreDetails/>} />
   <Route path="/users" element={<UserFeed/>} />
   <Route path="/prescriptions/:Id" element={<PrescriptionFeed />} />
+  <Route path="/forgot" element={<Forgot/>} />
 
   <Route path="/user" element={<PrivateRoute />} >
   <Route path="dashboard" element={<UserDashboard />} />

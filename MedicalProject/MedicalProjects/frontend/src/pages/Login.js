@@ -1,4 +1,4 @@
-import {Button, Card,CardHeader,Container, FormGroup,CardBody} from 'reactstrap'
+import {Button, Card,CardHeader,Container, FormGroup,CardBody, Input} from 'reactstrap'
 import {Row,Col} from 'react-bootstrap'
 import React, { useState } from "react";
 import Base from "../Components/Base";
@@ -119,12 +119,16 @@ const handleForSubmit = (event) =>{
                          onChange={(e)=>handleChange(e,'username')} />
                     </FloatingLabel>
 
-                    <FloatingLabel controlId="floatingPassword" label="Password">
-                        <Form.Control 
-                        type="password" 
-                        placeholder = "password" 
-                        value = {loginDetail.password}
-                        onChange={(e)=>handleChange(e,'password')}
+                    <FloatingLabel
+                        controlId="floatingInput"
+                        label="Email address"
+                        className="mb-3"
+                    >
+                        <Form.Control
+                         type="email" 
+                         placeholder="Enter email for pwd" 
+                        //  value={loginDetail.username}
+                        //  onChange={(e)=>handleChange(e,'username')} 
                          />
                     </FloatingLabel>
 
@@ -134,6 +138,7 @@ const handleForSubmit = (event) =>{
                     <Button color="dark" outline>Login</Button>
                     <Button onClick={handleForReset} className='ms-2 dark' color='dark' outline>Reset</Button>
                     <Button className='ms-2' color='dark' outline href='./Signup'>New Patient? Register Here</Button>
+                    <Button className='ms-2' color='dark' outline>Forgot Password</Button>
                 </Container>
 
                     </Form>
@@ -142,7 +147,6 @@ const handleForSubmit = (event) =>{
                 </Row>
                   
                 </Card>
-
             </Col>
          </Row>
        </Container>
