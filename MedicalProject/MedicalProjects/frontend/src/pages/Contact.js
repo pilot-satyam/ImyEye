@@ -96,7 +96,7 @@ const Contact=()=>{
             </div>
             <div className="form-group">
               <label htmlFor="message">Message:</label>
-              <textarea className="form-control inputLogin" id="message" rows="5" name="Message"></textarea>
+              <textarea className="form-control inputLogin" id="message" rows="3" name="Message"></textarea>
             </div>
             <br/>
             <button type="submit" className ="btn btn-primary mb-5 " value="send">Submit</button>

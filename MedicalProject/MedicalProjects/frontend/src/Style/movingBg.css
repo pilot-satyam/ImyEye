@@ -1,0 +1,239 @@
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.backgroundMV {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #7277e4;
+    overflow: hidden;
+}
+.backgroundMV li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 19s linear infinite;
+}
+
+
+
+
+.backgroundMV li:nth-child(0) {
+    left: 3%;
+    width: 150px;
+    height: 150px;
+    bottom: -150px;
+    animation-delay: 1s;
+}
+.backgroundMV li:nth-child(1) {
+    left: 10%;
+    width: 175px;
+    height: 175px;
+    bottom: -175px;
+    animation-delay: 3s;
+}
+.backgroundMV li:nth-child(2) {
+    left: 60%;
+    width: 197px;
+    height: 197px;
+    bottom: -197px;
+    animation-delay: 3s;
+}
+.backgroundMV li:nth-child(3) {
+    left: 22%;
+    width: 160px;
+    height: 160px;
+    bottom: -160px;
+    animation-delay: 9s;
+}
+.backgroundMV li:nth-child(4) {
+    left: 40%;
+    width: 136px;
+    height: 136px;
+    bottom: -136px;
+    animation-delay: 20s;
+}
+.backgroundMV li:nth-child(5) {
+    left: 45%;
+    width: 105px;
+    height: 105px;
+    bottom: -105px;
+    animation-delay: 21s;
+}
+.backgroundMV li:nth-child(6) {
+    left: 76%;
+    width: 181px;
+    height: 181px;
+    bottom: -181px;
+    animation-delay: 22s;
+}
+.backgroundMV li:nth-child(7) {
+    left: 65%;
+    width: 159px;
+    height: 159px;
+    bottom: -159px;
+    animation-delay: 32s;
+}
+.backgroundMV li:nth-child(8) {
+    left: 70%;
+    width: 138px;
+    height: 138px;
+    bottom: -138px;
+    animation-delay: 21s;
+}
+.backgroundMV li:nth-child(9) {
+    left: 86%;
+    width: 193px;
+    height: 193px;
+    bottom: -193px;
+    animation-delay: 26s;
+}
+
+
+/* //pattern */
+
+.pattern{
+    --s: 200px; /* control the size */
+    --c1: #1d1d1d;
+    --c2: #4e4f51;
+    --c3: #3c3c3c;
+    
+    background:
+      repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 180deg) 
+       calc(.5*var(--s)) calc(.5*var(--s)*0.577),
+      repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 180deg);
+    background-size: var(--s) calc(var(--s)*0.577);
+    /* 0.577 = tan(30deg) */
+  
+  }
+  
+  .adjust{
+    
+    height: 100%;
+    width: 100%;
+   
+    
+  }
+
+  /* //transition effect */
+
+  @keyframes circle-swoop {
+    from {
+      clip-path: var(--circle-top-right-out);
+    }
+    to {
+      clip-path: var(--circle-bottom-right-in);
+    }
+  }
+  
+  .--in-custom {
+    --transition__duration: 1s;
+    --transition__easing: ease-in-out;
+    animation-name: circle-swoop;
+  }
+
+
+  /* //page newsEvent */
+
+  .newbg{
+ 
+   
+    background-image: url('../../public/StackedBg.svg');
+    color: rgb(0, 0, 0);
+    padding: 5px;
+  
+   
+      /* overflow-x: hidden; */
+    
+      /* display: table-cell;
+      vertical-align: middle; */
+    height:150%;
+    width: 100%;
+      
+      justify-content:center;
+      
+  }
+
+
+  .cardNews{
+ 
+        width: 290px;
+        height: 454px;
+        background: #07182E;
+        position: relative;
+        display: flex;
+        place-content: center;
+        place-items: center;
+        overflow: hidden;
+        border-radius: 20px;
+      }
+      
+      .cardNews h2{
+        z-index: 1;
+        color: white;
+        font-size: 2em;
+      }
+    
+      .cardNews ul{
+        z-index: 1;
+        color: white;
+        font-size: 2em;
+      }
+      .cardNews a{ 
+        z-index: 1;
+        color: rgb(91, 169, 217);
+        font-size: 1em;
+      }
+      
+      .cardNews::before {
+        content: '';
+        position: absolute;
+        width: 100px;
+        background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+        height: 130%;
+        animation: rotBGimg 3s linear infinite;
+        transition: all 0.2s linear;
+      }
+      
+      @keyframes rotBGimg {
+        from {
+          transform: rotate(0deg);
+        }
+      
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      
+      .cardNews::after {
+        content: '';
+        position: absolute;
+        background: #07182E;
+        ;
+        inset: 5px;
+        border-radius: 15px;
+      }  
+      /* .card:hover:before {
+        background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+        animation: rotBGimg 3.5s linear infinite;
+      } */
+      
+      
+  

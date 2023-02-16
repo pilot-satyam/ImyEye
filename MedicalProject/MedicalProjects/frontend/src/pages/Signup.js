@@ -4,12 +4,25 @@ import {Button, Card,CardHeader,Container, FormGroup,CardBody,Form,Label,FormFee
 import {Row,Col} from 'react-bootstrap'
 import { signUp } from "../services/user-service";
 import { useState } from "react";
+import {
+    MDBBtn,
+    MDBContainer,
+    MDBRow,
+    MDBCol,
+    MDBCard,
+    MDBCardBody,
+    MDBCardImage,
+    MDBInput,
+    MDBIcon,
+    MDBCheckbox
+  }
+  from 'mdb-react-ui-kit';
 
 // import FloatingLabel from 'react-bootstrap/FloatingLabel'; 
 
 import {toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-
+import "../Style/Global.css"
 
 
 const Signup = () => {
@@ -84,7 +97,7 @@ const Signup = () => {
 
     return(
         <Base>
-       <Container className='mt-5 text-center '>
+       {/* <Container className='mt-5 text-center '>
         <Row className="mt-4">
             <Col sm={{
                 size:6, 
@@ -98,13 +111,8 @@ const Signup = () => {
             </CardHeader>
         <CardBody className="formStyle">
             <Form onSubmit={submitForm}>
-                        {/* <FloatingLabel
-                            controlId="floatingInput"
-                            Label="Enter Name"
-                            className="mb-3">
-                            <Form.Control type="email" placeholder="Enter Name" />
-                        </FloatingLabel> */}
-                <FormGroup floating>
+                      
+                
                     
                     
                     <Input type="text" 
@@ -119,9 +127,9 @@ const Signup = () => {
                     {error.errors?.response?.data?.name ? true : false}
                     </FormFeedback>
 
-                </FormGroup>
+                
 
-                <FormGroup floating> 
+                 
                     <Input type="email" placeholder="Enter email" 
                      invalid={error.errors?.response?.data?.email ? true : false}
                     id="email"
@@ -132,9 +140,9 @@ const Signup = () => {
                     <FormFeedback>
                     {error.errors?.response?.data?.email ? true : false}
                     </FormFeedback>
-                </FormGroup>
+                
 
-                <FormGroup floating>
+                
                 
                     <Input type="password" 
                      placeholder="Enter Password" 
@@ -146,9 +154,9 @@ const Signup = () => {
                     <FormFeedback>
                     {error.errors?.response?.data?.password ? true : false}
                     </FormFeedback>
-                </FormGroup>
+                
 
-                <FormGroup floating>
+                
                     
                     <Input type="text" 
                     placeholder="Enter age" 
@@ -161,9 +169,9 @@ const Signup = () => {
                     <FormFeedback>
                     {error.errors?.response?.data?.age ? true : false}
                     </FormFeedback>
-                </FormGroup>
+                
 
-                <FormGroup floating>
+                
                     
                     <Input type="text" 
                     placeholder="Enter weight" 
@@ -176,9 +184,9 @@ const Signup = () => {
                     <FormFeedback>
                     {error.errors?.response?.data?.weight ? true : false}
                     </FormFeedback>
-                </FormGroup>
+                
 
-                <FormGroup floating>
+                
                     
                     <Input type="text" 
                     placeholder="Enter Height" 
@@ -191,9 +199,9 @@ const Signup = () => {
                     <FormFeedback>
                     {error.errors?.response?.data?.height ? true : false}
                     </FormFeedback>
-                </FormGroup>
+                
 
-                <FormGroup floating>
+                
                     
                     
                     <Input type="text" 
@@ -207,9 +215,9 @@ const Signup = () => {
                     <FormFeedback>
                     {error.errors?.response?.data?.contact ? true : false}
                     </FormFeedback>
-                </FormGroup>
+                
 
-                <FormGroup floating>
+                
                     <Input type="text" 
                     placeholder="Enter Address" 
                     invalid={error.errors?.response?.data?.address ? true : false}
@@ -221,7 +229,7 @@ const Signup = () => {
                     <FormFeedback>
                     {error.errors?.response?.data?.address ? true : false}
                     </FormFeedback>
-                </FormGroup>
+                
 
                 <Container className="text-center">
             <Button color="dark">Register</Button>
@@ -234,7 +242,163 @@ const Signup = () => {
         </Card>
             </Col>
         </Row>
-       </Container>
+       </Container> */}
+
+
+
+
+
+
+<MDBContainer fluid className='p-4'>
+
+<MDBRow>
+
+ 
+
+  <MDBCol md='4' className='position-relative' style={{marginRight:"150px"}}>
+
+    <div id="radius-shape-1" className="position-absolute rounded-circle shadow-5-strong"></div>
+    <div id="radius-shape-2" className="position-absolute shadow-5-strong"></div>
+
+    <MDBCard className='my-5 bg-glass cardStyle' style={{height:"90%",width:"140%"}}>
+          <CardHeader>
+              <h3 className="center">Sign Up</h3>
+              <i style={{fontSize:"24px"}} className="fa center">&#xf2bc;</i>
+          </CardHeader>
+   
+            <CardBody style={{height:"50%"}}>
+
+            <Form onSubmit={submitForm}>
+                      
+                        <Label htmlFor="name" className="mt-2 mb-2">Enter Name</Label>
+                        <Input type="text" 
+                          placeholder='Enter Name' 
+                          invalid={error.errors?.response?.data?.name ? true : false}
+                          id="name"
+                          onChange= {(e)=>handleChange(e,'name')}
+                          value = {data.name}
+                          className="inputLogin"
+                          />
+                          
+                          <FormFeedback>
+                          {error.errors?.response?.data?.name ? true : false}
+                          </FormFeedback>
+      
+                      
+                          <Label htmlFor="email" className="mt-2 mb-2" >Enter Email</Label>
+                          <Input type="email" placeholder="Enter email" 
+                           invalid={error.errors?.response?.data?.email ? true : false}
+                          id="email"
+                          onChange= {(e)=>handleChange(e,'email')}
+                          value = {data.email} 
+                          className="inputLogin" />
+                          
+                          <FormFeedback>
+                          {error.errors?.response?.data?.email ? true : false}
+                          </FormFeedback>
+                      
+      
+                          <Label htmlFor="password" className="mt-2 mb-2" >Enter Password</Label>
+                          <Input type="password" 
+                           placeholder="Enter Password" 
+                           id="password"
+                           invalid={error.errors?.response?.data?.password ? true : false}
+                          onChange= {(e)=>handleChange(e,'password')}
+                          value = {data.password} 
+                          className="inputLogin"/>
+                           
+                          <FormFeedback>
+                          {error.errors?.response?.data?.password ? true : false}
+                          </FormFeedback>
+                      
+      
+                          <Label htmlFor="age" className="mt-2 mb-2" >Enter Age</Label>
+                          <Input type="text" 
+                          placeholder="Enter age" 
+                          invalid={error.errors?.response?.data?.age ? true : false}
+                          id="age"
+                          onChange= {(e)=>handleChange(e,'age')}
+                          value = {data.age} 
+                          className="inputLogin"/> 
+                         
+                          <FormFeedback>
+                          {error.errors?.response?.data?.age ? true : false}
+                          </FormFeedback>
+                      
+                     
+                          <Label htmlFor="weight" className="mt-2 mb-2" >Enter weight</Label>
+                          <Input type="text" 
+                          placeholder="Enter weight" 
+                          invalid={error.errors?.response?.data?.weight ? true : false} 
+                          id="weight"
+                          onChange= {(e)=>handleChange(e,'weight')}
+                          value = {data.weight} 
+                          className="inputLogin"/> 
+                         
+                          <FormFeedback>
+                          {error.errors?.response?.data?.weight ? true : false}
+                          </FormFeedback>
+                      
+      
+                          <Label htmlFor="height" className="mt-2 mb-2" >Enter Height</Label>
+                          <Input type="text" 
+                          placeholder="Enter Height" 
+                          invalid={error.errors?.response?.data?.height ? true : false}
+                          id="height"
+                          onChange= {(e)=>handleChange(e,'height')}
+                          value = {data.height} 
+                          className="inputLogin"/>
+                       
+                          <FormFeedback>
+                          {error.errors?.response?.data?.height ? true : false}
+                          </FormFeedback>
+
+                       
+                         <Label htmlFor="contact" className="mt-2 mb-2" >Enter contact</Label>
+                         <Input type="text" 
+                          placeholder="Enter Contact" 
+                          invalid={error.errors?.response?.data?.contact ? true : false}
+                          id="contact"
+                          onChange= {(e)=>handleChange(e,'contact')}
+                          value = {data.contact} 
+                          className="inputLogin"/> 
+                          <FormFeedback>
+                          {error.errors?.response?.data?.contact ? true : false}
+                          </FormFeedback>
+                      
+                      
+                          <Label htmlFor="address" className="mt-2 mb-2" >Enter Address</Label>
+                          <Input type="text" 
+                          placeholder="Enter Address" 
+                          invalid={error.errors?.response?.data?.address ? true : false}
+                          id="address"
+                          onChange= {(e)=>handleChange(e,'address')}
+                          value = {data.address} 
+                          className="inputLogin"/>
+                          <FormFeedback>
+                          {error.errors?.response?.data?.address ? true : false}
+                          </FormFeedback>
+              
+                      <Container className="text-center mt-2 mb-2">
+                  <Button color="dark" className="btnLogin">Register</Button>
+                  <Button color="secondary" className="ms-2 btnLogin" type="reset" value="Reset">Reset</Button>
+                </Container>
+      
+                  </Form> 
+
+            </CardBody>
+   
+  </MDBCard>
+
+</MDBCol>
+<MDBCol md='6' className='text-center text-md-start d-flex flex-column justify-content-center'>
+
+<img src ="SignInPatient.svg"></img>
+
+</MDBCol>
+</MDBRow>
+</MDBContainer>
+
         </Base> 
     );
 }

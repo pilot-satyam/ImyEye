@@ -35,8 +35,9 @@
   justify-content: center; /* center items horizontally */
 }
   body {
-    background-color: #e3e8f3;
+    background-color: #5d6ec6;
     background-image: url('../../public/body.jpg');
+    /* background-image: url('../../public/BodyBg.svg'); */
     color: rgb(0, 0, 0);
     padding: 40px;
     font-family: 'Arvo', serif;
@@ -46,8 +47,8 @@
     
       /* display: table-cell;
       vertical-align: middle; */
-
-
+    height:100%;
+    width: 100%;
       
       justify-content:center;
       
@@ -285,25 +286,21 @@ h2 {
 }
 
 /* this style is being applied for the Grid page */
+.cardGridDark {
+  width: 190px;
+  height: 254px;
+  border-radius: 30px;
+  background: #7657b1;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+ }
 
-.slide {
-  animation: slide 0.5s ease-in-out;
-}
-@keyframes slide {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-
-
-
-}
-
-.icon-container:hover .icon {
-  transform: scale(1.2); /* Increase the size of the icon by 20% */
-}
+ .cardGridLight {
+  width: 190px;
+  height: 254px;
+  border-radius: 30px;
+  background: #a490ca;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+ }
 hr {
   width: 80%; /* set the width of the hr tag */
   height: 4px;
