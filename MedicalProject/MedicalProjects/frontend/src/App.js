@@ -75,7 +75,7 @@ function App() {
   <Route exact path="/symptomForm" element={<PatientInformation/>}/>
   <Route exact path="/patientDetails" element={<PatientDetails/>}/>
   <Route exact path ="/patientProblemDetails" element={<PatientProblemDetails/>}/>
-  <Route exact path="/prescription" element={<Prescription/>}/>
+  {/* <Route exact path="/prescription" element={<Prescription/>}/> */}
   <Route exact path ="/appointmentForm" element={<AppointmentPage/>}/>
 
   <Route exact path='/doctors' element={<NewFeed />}/>

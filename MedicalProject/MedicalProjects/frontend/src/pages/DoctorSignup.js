@@ -135,7 +135,7 @@ const DoctorSignup = () =>{
 
           <CardBody>
               <Form onSubmit={submitForm}>
-              <label htmlFor="id">Enter Your I'd</label>
+              <label htmlFor="id"> I'd</label>
                     <br></br>
                     <input type="text"
                     placeholder="Enter I'd"
@@ -146,7 +146,7 @@ const DoctorSignup = () =>{
                     className="inputLogin"></input>
 
 <br></br>
-                <label htmlFor="name">Enter Name</label>
+                <label htmlFor="name">Name</label>
               
                     <br></br>
                     <input type="text" 
@@ -158,13 +158,13 @@ const DoctorSignup = () =>{
                     className="inputLogin"></input> 
 
 <br></br>
-                <label htmlFor="email">Enter Email</label> <br></br>
+                <label htmlFor="email"> Email</label> <br></br>
                     <input type="email" placeholder="Enter email" invalid="true" id="name"
                     onChange= {(e)=>handleChange(e,'email')}
                     value = {data.email}
                     className="inputLogin"></input>
 <br></br>
-                <label htmlFor="password">Enter Password</label> <br></br>
+                <label htmlFor="password">Password</label> <br></br>
                     <input type="password" placeholder="Enter Password" invalid="true" id="password"
                     onChange= {(e)=>handleChange(e,'password')}
                     value = {data.password}
