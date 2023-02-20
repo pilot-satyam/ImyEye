@@ -45,4 +45,7 @@ public class Doctor{
      @OneToMany(mappedBy = "doctor",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
      List<Prescription> lists = new ArrayList<>();
 
+     @OneToMany(mappedBy = "doctor",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+     List<Appointment> appointmentlists = new ArrayList<>();
+
 }

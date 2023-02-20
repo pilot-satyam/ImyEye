@@ -65,6 +65,8 @@ public SecurityFilterChain SecurityFilterChain(HttpSecurity http) throws Excepti
     .permitAll()
     .requestMatchers("/api/v1/users/{userId}")
     .permitAll()
+    .requestMatchers("/send-otp")
+    .permitAll()
     // .requestMatchers("/api/v1/auth/docRegister")
     // .permitAll()
     .requestMatchers(HttpMethod.GET)

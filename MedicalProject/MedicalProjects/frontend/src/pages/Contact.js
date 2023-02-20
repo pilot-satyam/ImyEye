@@ -14,7 +14,7 @@ const Contact=()=>{
           <img src="call-center.gif" alt="COntact Image" className="img-fluid" />
         </div>
         <div className="col-md-6">
-          <form   action="https://formspree.io/f/myyvrrwa"
+          <form action="https://formspree.io/f/myyvrrwa"
                   method="POST"
                   className="contact-inputs formLogin"
                   style={{width:"80%",height:"90%"}}>
