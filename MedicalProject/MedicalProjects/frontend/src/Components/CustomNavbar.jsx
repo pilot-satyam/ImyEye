@@ -35,8 +35,8 @@ const CustomNavbar =(props)=> {
   }
 
   return (
-    // <Navbar bg="primary" expand="lg" expand={props.expand} variant="light" fixed="top"  className={`navbar navbar-${theme}`} fixed={props.fixed}>
-    <Navbar bg={props.bg} className={`navbar navbar-${theme}`} fixed="top" expand="lg">
+    <Navbar bg="dark" expand="lg"  variant="dark" fixed="top"  >
+   
       <Container>
         <img src ="favicon-32x32.png" alt="Image of eye for the navBar" className='rounded-circle'/>
 
@@ -57,12 +57,16 @@ const CustomNavbar =(props)=> {
             <Link to="/branch2">
                <NavDropdown.Item className='navbar-dropdown-item'>Branch-2</NavDropdown.Item>
             </Link> */}
-            <NavDropdown title="Address" id="basic-nav-dropdown" className='navbar-dropdown'>
-              <NavDropdown.Item href="/address" className='black-dropdown'>Branch-1</NavDropdown.Item>
-              <NavDropdown.Item href="/branch2" className='black-dropdown'>Branch-2</NavDropdown.Item>
-            </NavDropdown>
-            <NavLink to ="/news&Event" style={{textDecoration: 'none'}}> NEWS/EVENTS &nbsp;&nbsp;&nbsp;</NavLink>
             
+            <div class="me-auto space dropdown navbar-dropdown">
+  <button class="dropbtn text-white bg-dark">ADDRESS</button>
+  <div class="dropdown-content " id='address_dropdown'>
+    <a href="/address" id="address_options">Branch 1</a>
+    <a href="/branch2" id="">Branch 2</a>
+  </div>
+</div>
+
+
 
             {/* <NavDropdown title="More" id="basic-nav-dropdown" className='nav'>
               <NavDropdown.Item href="/services" >Services</NavDropdown.Item>
@@ -96,9 +100,7 @@ const CustomNavbar =(props)=> {
           {/* <NavLink to="/login" style={{textDecoration: 'none'}}> New Admission &nbsp;&nbsp;&nbsp; </NavLink>
           <NavLink to='/physicianlogin' style={{textDecoration: 'none'}}>Physician Login &nbsp;&nbsp;&nbsp;</NavLink> */}
           </Nav>
-        <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-          <FontAwesomeIcon icon={theme === 'light' ? faMoon : faSun} />
-      </button>
+       
         </Navbar.Collapse>
       </Container>
     </Navbar>
