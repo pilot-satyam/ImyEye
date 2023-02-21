@@ -62,7 +62,7 @@ const Services = () => {
                     <p className="mt-4">Cure with Care Center</p>
                     <p> and make your vision clear</p>
                     <Link to="/doctor">
-                        <button className="button">
+                        <button className="button buttonStyle">
                             <i style={{fontSize:"24px"}} className="fa">&#xf0f0;</i>
                         </button>
                     </Link>
@@ -78,7 +78,7 @@ const Services = () => {
                     
                     
                     <Link to="/showAppointment">
-                        <button className="button"><i style={{fontSize:"24px"}} className="fa">&#xf274;</i></button>
+                        <button className="button buttonStyle"><i style={{fontSize:"24px"}} className="fa">&#xf274;</i></button>
                     </Link>
                     <br/>
                     <br/>
@@ -91,7 +91,7 @@ const Services = () => {
                     <p className="mt-4">See this address </p>
                     <p>for in person meeting.</p>
                     <Link to="/address">
-                        <button className="button mb-5">
+                        <button className="button buttonStyle mb-5">
                              <i style={{fontSize:'24px'}} className='fas'>&#xf3c5;</i>
                         </button>
                     </Link>

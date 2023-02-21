@@ -48,33 +48,30 @@ const CustomNavbar =(props)=> {
          <Nav className="me-auto space">
             <NavLink to="/home" style={{textDecoration: 'none'}} className="nav-content"> HOME &nbsp;&nbsp;&nbsp;</NavLink>
             <NavLink to="/services" style={{textDecoration: 'none'}}> SERVICES &nbsp;&nbsp;&nbsp;</NavLink>
-            <NavLink to="/contactUs" style={{textDecoration: 'none'}}>  CONTACT US &nbsp;&nbsp;&nbsp;</NavLink>
-        
+            <NavLink to="/contactUs" style={{textDecoration: 'none'}}>  CONTACT US </NavLink>
+           
             
-            {/* <Link to="/address">
-              <NavDropdown.Item className='navbar-dropdown-item'>Branch-1</NavDropdown.Item> 
-            </Link>
-            <Link to="/branch2">
-               <NavDropdown.Item className='navbar-dropdown-item'>Branch-2</NavDropdown.Item>
-            </Link> */}
+          
             
-            <div class="me-auto space dropdown navbar-dropdown">
-  <button class="dropbtn text-white bg-dark">ADDRESS</button>
-  <div class="dropdown-content " id='address_dropdown'>
+            <div className="me-auto space dropdown navbar-dropdown">
+  <button className="dropbtn text-white bg-dark">ADDRESS</button>
+  <div className="dropdown-content " id='address_dropdown'>
     <a href="/address" id="address_options">Branch 1</a>
     <a href="/branch2" id="">Branch 2</a>
   </div>
 </div>
+&nbsp;&nbsp;&nbsp;
+<NavLink to="/news&Event" style={{textDecoration: 'none'}}>  NEWS & EVENT &nbsp;&nbsp;&nbsp;</NavLink>
 
-
-
-            {/* <NavDropdown title="More" id="basic-nav-dropdown" className='nav'>
-              <NavDropdown.Item href="/services" >Services</NavDropdown.Item>
-              <NavDropdown.Item href="/contactUs">
-                Contact Us
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/address" >Address</NavDropdown.Item>
-            </NavDropdown> */}
+<div className="me-auto space dropdown navbar-dropdown">
+  <button className="dropbtn text-white bg-dark">TREATMENT</button>
+  <div className="dropdown-content " id='address_dropdown'>
+    <a href="/cornea" id="address_options"> CORNEA</a>
+    <a href="/retina" id="">RETINA</a>
+    <a href="/cataract" id=""> CATARACT</a>
+  </div>
+</div>
+          
           </Nav>
 
           <Nav>

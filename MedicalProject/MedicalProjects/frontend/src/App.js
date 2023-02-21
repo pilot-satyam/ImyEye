@@ -44,6 +44,9 @@ import Address2 from './pages/Address2';
 import DemoLogin from './pages/DemoLogin';
 import DemoPhysicianLogin from './pages/DemoPhysicianLogin';
 import Forgot from './pages/Forgot/Forgot';
+import Cataract from './Treatment/Cataract';
+import Retina from './Treatment/Retina';
+import Cornea from './Treatment/Cornea';
 
 
 function App() {
@@ -90,6 +93,9 @@ function App() {
   <Route path="/users" element={<UserFeed/>} />
   <Route path="/prescriptions/:Id" element={<PrescriptionFeed />} />
   <Route path="/forgot" element={<Forgot/>} />
+  <Route path='/cataract' element={<Cataract/>}/>
+  <Route path='/retina' element={<Retina/>}/>
+  <Route path='/cornea' element={<Cornea/>}/>
 
   <Route path="/user" element={<PrivateRoute />} >
   <Route path="dashboard" element={<UserDashboard />} />

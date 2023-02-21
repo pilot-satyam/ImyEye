@@ -13,7 +13,7 @@
 } */
 
 
-button {
+.buttonStyle {
   font-size: 18px;
   display: inline-block;
   outline: 0;
@@ -30,12 +30,12 @@ button {
   transition: box-shadow 0.15s ease, transform 0.15s ease;
  }
  
- button:hover {
+ .buttonStyle :hover {
   box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
   transform: translateY(-0.1em);
  }
  
- button:active {
+ .buttonStyle:active {
   box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
   transform: translateY(0em);
  }
@@ -274,6 +274,19 @@ h2 {
     font-family: 'Merriweather', serif;
 }
 
+.fontStyle{
+  font-weight: bold;
+  font-family: 'Merriweather', serif;
+}
+
+.verticleLine{
+  
+    width: '1px';
+    height: '100%';
+    background-color: '#ccc';
+    margin: '0 2rem'
+  
+}
 .formStyle{
   background-image: url('../../public/background.jpg');
   background-size: cover;
@@ -332,6 +345,7 @@ h2 {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
  }
 hr {
+
   width: 80%; /* set the width of the hr tag */
   height: 4px;
   margin: 10px auto; /* center the hr tag horizontally */

@@ -146,7 +146,7 @@ import Base from '../../Components/Base'
             </div>
             
             <FormGroup style={{display: "flex", justifyContent: "center"}}>
-              <Button  style={{backgroundColor: "#7955bc"}}>Book Appointment</Button>
+              <Button  style={{backgroundColor: "#7955bc"}} className="buttonStyle">Book Appointment</Button>
             </FormGroup>
             
           </Form>
@@ -155,7 +155,7 @@ import Base from '../../Components/Base'
         )}
 
          
-    </MDBCardBody>
+    </MDBCardBody> 
   </MDBCard>
 
 </MDBCol>

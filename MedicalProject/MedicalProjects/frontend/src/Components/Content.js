@@ -45,7 +45,7 @@ const Content = ({ myData }) => {
             <Container className="text-center">
              <NavLink to="/contactUs"> 
              
-              <button className="button" outline color="secondary">Contact Us </button>
+              <button className="buttonStyle" outline color="secondary">Contact Us </button>
              </NavLink>
             </Container>
             
