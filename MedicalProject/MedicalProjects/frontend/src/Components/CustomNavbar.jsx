@@ -61,7 +61,7 @@ const CustomNavbar =(props)=> {
   </div>
 </div>
 &nbsp;&nbsp;&nbsp;
-<NavLink to="/news&Event" style={{textDecoration: 'none'}}>  NEWS & EVENT &nbsp;&nbsp;&nbsp;</NavLink>
+<NavLink to="/news&Event" style={{textDecoration: 'none'}}>  NEWS & EVENT</NavLink>
 
 <div className="me-auto space dropdown navbar-dropdown">
   <button className="dropbtn text-white bg-dark">TREATMENT</button>

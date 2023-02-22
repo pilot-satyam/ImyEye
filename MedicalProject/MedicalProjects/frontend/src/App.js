@@ -47,6 +47,7 @@ import Forgot from './pages/Forgot/Forgot';
 import Cataract from './Treatment/Cataract';
 import Retina from './Treatment/Retina';
 import Cornea from './Treatment/Cornea';
+import PrescriptionList from './pages/PrescriptionList/PrescriptionList';
 
 
 function App() {
@@ -92,6 +93,7 @@ function App() {
   <Route path='/feedplusmenu/:doctorId' element={<MoreDetails/>} />
   <Route path="/users" element={<UserFeed/>} />
   <Route path="/prescriptions/:Id" element={<PrescriptionFeed />} />
+  <Route path="/prescriptions" element={<PrescriptionList />} />
   <Route path="/forgot" element={<Forgot/>} />
   <Route path='/cataract' element={<Cataract/>}/>
   <Route path='/retina' element={<Retina/>}/>

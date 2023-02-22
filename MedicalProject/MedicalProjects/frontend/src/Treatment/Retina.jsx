@@ -82,11 +82,14 @@ function Retina() {
 								<h3 className="colblue centerIt" style={{color:"#653daf"}}>Treatments for Retinal Issues</h3>
 							<p>While there are multiple causes for the Retina to get damaged, every cause has a treatment. We, at Maxivision, have adopted the best practices that are used all around the world to treat Retinal issues.</p>
 							<p>Almost all the treatments are quick, painless, and patients can recover easily.</p>
+							
 							<ul className="dotsleft">
-								<li>Fluorescein Angiography (FFA)</li>
+								<li >Fluorescein Angiography (FFA)</li>
 								<li>OCT – Optical Coherence Tomography</li>
 								<li>Sutureless Vitrectomy</li>
 							</ul>
+							
+							
 							
 							<br/>
 							<br/>
