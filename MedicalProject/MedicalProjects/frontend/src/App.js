@@ -1,8 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
-import Login from './pages/Login';
-import PhysicianLogin from './pages/PhysicianLogin';
 import DoctorSignup from './pages/DoctorSignup';
 import Signup from './pages/Signup';
 import Home from './pages/Home';
@@ -93,7 +91,7 @@ function App() {
   <Route path='/feedplusmenu/:doctorId' element={<MoreDetails/>} />
   <Route path="/users" element={<UserFeed/>} />
   <Route path="/prescriptions/:Id" element={<PrescriptionFeed />} />
-  <Route path="/prescriptions" element={<PrescriptionList />} />
+  {/* <Route path="/prescriptions" element={<PrescriptionList />} /> */}
   <Route path="/forgot" element={<Forgot/>} />
   <Route path='/cataract' element={<Cataract/>}/>
   <Route path='/retina' element={<Retina/>}/>
