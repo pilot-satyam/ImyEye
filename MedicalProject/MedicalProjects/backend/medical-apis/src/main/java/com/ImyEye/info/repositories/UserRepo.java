@@ -9,5 +9,6 @@ import com.ImyEye.info.entities.User;
 public interface UserRepo extends JpaRepository<User,Integer>{
 
       Optional<User> findByEmail(String email);
+      // public User findByResetPasswordToken(String token);
 
 }

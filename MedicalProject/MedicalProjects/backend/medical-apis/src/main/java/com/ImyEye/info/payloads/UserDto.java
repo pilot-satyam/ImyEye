@@ -3,9 +3,6 @@ package com.ImyEye.info.payloads;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -36,6 +33,8 @@ public class UserDto {
 	private int height;
 	@NotNull
 	private int contact;
+	//storing the resetting the password token
+	// private String reset_password_token;
 	@NotEmpty
 	private String address;
 	private Set<RoleDto> roles = new HashSet<>();

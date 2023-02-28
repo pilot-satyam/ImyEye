@@ -30,11 +30,17 @@ public class Appointment {
     @Column(nullable = false)
     private Date addedDate;
 
+    @Column(nullable = false)
+    private Date date;
+
     @ManyToOne
     private User user;
 
     @JoinColumn(name="doctor_id")
     @ManyToOne
     private Doctor doctor;
+
+    @Column(nullable = false)
+    private String time;
 
 }

@@ -11,8 +11,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.ImyEye.info.config.AppConstants;
+import com.ImyEye.info.config.TwilioConfig;
 import com.ImyEye.info.entities.Role;
 import com.ImyEye.info.repositories.RoleRepo;
+import com.twilio.Twilio;
+
+import jakarta.annotation.PostConstruct;
 
 
 @SpringBootApplication
@@ -33,6 +37,14 @@ public class MedicalApisApplication implements CommandLineRunner {
 	{
 		return new ModelMapper();
 	}
+
+		// @Autowired
+		// private TwilioConfig twilioConfig;
+		// @PostConstruct
+	    // public void initTwilio()
+		// {
+        //  Twilio.init(twilioConfig.getAccountSid(), twilioConfig.getAuthToken());
+	    // }
 
 	@Override
 	public void run(String... args) throws Exception {
