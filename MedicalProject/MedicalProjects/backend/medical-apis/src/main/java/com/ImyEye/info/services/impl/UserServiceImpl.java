@@ -126,4 +126,17 @@ public class UserServiceImpl implements UserService {
 		return this.modelMapper.map(newUser,UserDto.class);
 	}
 
+	public void updateUserPassword(User user, String password) {
+		user.setPassword(passwordEncoder.encode(password));
+		userRepo.save(user);
+	}
+
+	@Override
+    public UserDto getUserByEmail(String email) {
+        User user = this.userRepo.findByEmail(email)
+            .orElseThrow(() -> new ResourceNotFoundException("User", "Email", 0));
+        return this.userToDto(user);
+    }
+
+	
 }

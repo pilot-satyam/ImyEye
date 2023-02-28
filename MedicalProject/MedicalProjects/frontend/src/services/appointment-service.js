@@ -3,7 +3,7 @@ import { privateAxios } from "./helper";
 
 export const createAppointment=(appointmentData)=>{
        return privateAxios
-       .post(`/user/${appointmentData.id}/doctor/${appointment.doctorId}/appointment`,appointmentData)
+       .post(`/user/${appointmentData.id}/doctor/${appointmentData.doctorId}/appointment`,appointmentData)
        .then(response=>response.data)
 }
 

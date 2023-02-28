@@ -11,7 +11,11 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class AppointmentDto {
-    private Integer Id;
+    private Integer id;
     @NotEmpty
     private Date addedDate;
+    @NotEmpty
+    private Date date;
+    @NotEmpty
+    private String time;
 }

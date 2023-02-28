@@ -1,5 +1,6 @@
 package com.ImyEye.info.controllers;
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,7 +33,7 @@ public class UserController {
 	@PostMapping("/")
 	public ResponseEntity<UserDto> createUser(@Valid @RequestBody UserDto userDto){
 		UserDto createdUserDto = this.userService.createUser(userDto);
-		//response entity se hamara response jayega jaha user create hua yani createduserdto par aur status hamara jo create hua
+		//response entity se hamara response jayega jaha user create hua yani created userdto par aur status hamara jo create hua
 		return new ResponseEntity<>(createdUserDto,HttpStatus.CREATED);
 	}
 	
