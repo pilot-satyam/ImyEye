@@ -35,8 +35,8 @@ const CustomNavbar =(props)=> {
   }
 
   return (
-    // <Navbar bg="primary" expand="lg" expand={props.expand} variant="light" fixed="top"  className={`navbar navbar-${theme}`} fixed={props.fixed}>
-    <Navbar bg={props.bg} className={`navbar navbar-${theme}`} fixed="top" expand="lg">
+    <Navbar bg="dark" expand="lg"  variant="dark" fixed="top"  >
+   
       <Container>
         <img src ="favicon-32x32.png" alt="Image of eye for the navBar" className='rounded-circle'/>
 
@@ -48,29 +48,30 @@ const CustomNavbar =(props)=> {
          <Nav className="me-auto space">
             <NavLink to="/home" style={{textDecoration: 'none'}} className="nav-content"> HOME &nbsp;&nbsp;&nbsp;</NavLink>
             <NavLink to="/services" style={{textDecoration: 'none'}}> SERVICES &nbsp;&nbsp;&nbsp;</NavLink>
-            <NavLink to="/contactUs" style={{textDecoration: 'none'}}>  CONTACT US &nbsp;&nbsp;&nbsp;</NavLink>
-        
+            <NavLink to="/contactUs" style={{textDecoration: 'none'}}>  CONTACT US </NavLink>
+           
             
-            {/* <Link to="/address">
-              <NavDropdown.Item className='navbar-dropdown-item'>Branch-1</NavDropdown.Item> 
-            </Link>
-            <Link to="/branch2">
-               <NavDropdown.Item className='navbar-dropdown-item'>Branch-2</NavDropdown.Item>
-            </Link> */}
-            <NavDropdown title="Address" id="basic-nav-dropdown" className='navbar-dropdown'>
-              <NavDropdown.Item href="/address" className='black-dropdown'>Branch-1</NavDropdown.Item>
-              <NavDropdown.Item href="/branch2" className='black-dropdown'>Branch-2</NavDropdown.Item>
-            </NavDropdown>
-            <NavLink to ="/news&Event" style={{textDecoration: 'none'}}> NEWS/EVENTS &nbsp;&nbsp;&nbsp;</NavLink>
+          
             
+            <div className="me-auto space dropdown navbar-dropdown">
+  <button className="dropbtn text-white bg-dark">ADDRESS</button>
+  <div className="dropdown-content " id='address_dropdown'>
+    <a href="/address" id="address_options">Branch 1</a>
+    <a href="/branch2" id="">Branch 2</a>
+  </div>
+</div>
+&nbsp;&nbsp;&nbsp;
+<NavLink to="/news&Event" style={{textDecoration: 'none'}}>  NEWS & EVENT</NavLink>
 
-            {/* <NavDropdown title="More" id="basic-nav-dropdown" className='nav'>
-              <NavDropdown.Item href="/services" >Services</NavDropdown.Item>
-              <NavDropdown.Item href="/contactUs">
-                Contact Us
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/address" >Address</NavDropdown.Item>
-            </NavDropdown> */}
+<div className="me-auto space dropdown navbar-dropdown">
+  <button className="dropbtn text-white bg-dark">TREATMENT</button>
+  <div className="dropdown-content " id='address_dropdown'>
+    <a href="/cornea" id="address_options"> CORNEA</a>
+    <a href="/retina" id="">RETINA</a>
+    <a href="/cataract" id=""> CATARACT</a>
+  </div>
+</div>
+          
           </Nav>
 
           <Nav>
@@ -96,9 +97,7 @@ const CustomNavbar =(props)=> {
           {/* <NavLink to="/login" style={{textDecoration: 'none'}}> New Admission &nbsp;&nbsp;&nbsp; </NavLink>
           <NavLink to='/physicianlogin' style={{textDecoration: 'none'}}>Physician Login &nbsp;&nbsp;&nbsp;</NavLink> */}
           </Nav>
-        <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-          <FontAwesomeIcon icon={theme === 'light' ? faMoon : faSun} />
-      </button>
+       
         </Navbar.Collapse>
       </Container>
     </Navbar>

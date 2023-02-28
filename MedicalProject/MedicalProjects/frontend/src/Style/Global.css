@@ -1,7 +1,7 @@
 
-.button {
+/* .button {
   align-items: center;  
-  background-color: #a48bd3;
+  background-color: #7955bc;
   border-radius: 5ch;
 }
 
@@ -10,7 +10,35 @@
   border-radius: 5ch;
   border-color: rgb(46, 3, 87);
   transform:scale(1.05);
-}
+} */
+
+
+.buttonStyle {
+  font-size: 18px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  will-change: box-shadow,transform;
+  background: radial-gradient( 100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100% );
+  box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+  padding: 0 2em;
+  border-radius: 0.3em;
+  color: #fff;
+  height: 2.6em;
+  text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+ }
+ 
+ .buttonStyle :hover {
+  box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
+  transform: translateY(-0.1em);
+ }
+ 
+ .buttonStyle:active {
+  box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+  transform: translateY(0em);
+ }
 
 .hero-section-image {
   /* width: 100%; */
@@ -35,7 +63,7 @@
   justify-content: center; /* center items horizontally */
 }
   body {
-    background-color: #5d6ec6;
+  
     background-image: url('../../public/body.jpg');
     /* background-image: url('../../public/BodyBg.svg'); */
     color: rgb(0, 0, 0);
@@ -55,6 +83,8 @@
   
     
   }
+
+
 
   .body{
     background-image: url('../../public/body.jpg');
@@ -244,6 +274,19 @@ h2 {
     font-family: 'Merriweather', serif;
 }
 
+.fontStyle{
+  font-weight: bold;
+  font-family: 'Merriweather', serif;
+}
+
+.verticleLine{
+  
+    width: '1px';
+    height: '100%';
+    background-color: '#ccc';
+    margin: '0 2rem'
+  
+}
 .formStyle{
   background-image: url('../../public/background.jpg');
   background-size: cover;
@@ -299,9 +342,11 @@ h2 {
   height: 254px;
   border-radius: 30px;
   background: #a490ca;
+ 
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
  }
 hr {
+
   width: 80%; /* set the width of the hr tag */
   height: 4px;
   margin: 10px auto; /* center the hr tag horizontally */

@@ -45,7 +45,7 @@ const Content = ({ myData }) => {
             <Container className="text-center">
              <NavLink to="/contactUs"> 
              
-              <button className="button" outline color="secondary">Contact Us </button>
+              <button className="buttonStyle" outline color="secondary">Contact Us </button>
              </NavLink>
             </Container>
             
@@ -53,15 +53,18 @@ const Content = ({ myData }) => {
             <br/>
           </div>
           {/* our homepage image  hero-section-image*/}
-          <div className="hero-section-image imageCenter">
-            
+          <div>
+{/*             
               <img
                 src="AboutUsImage.jpg"
                 alt="hero-section-photo"
                 className="img-style centerIt"
 
             
-              />
+              /> */} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
+              <img src="about-img.svg" alt="about us image" style={{width:"50%", height:"50%"}}></img>
           
           </div>
         </div>

@@ -269,15 +269,17 @@ const Signup = () => {
             <CardBody style={{height:"50%"}}>
 
             <Form onSubmit={submitForm}>
-                      
-                        <Label htmlFor="name" className="mt-2 mb-2">Enter Name</Label>
+                  
+                  <Row>
+                    <Col md ={6}>
+                    <Label htmlFor="name" className="mt-2 mb-2">Name</Label>
                         <Input type="text" 
                           placeholder='Enter Name' 
                           invalid={error.errors?.response?.data?.name ? true : false}
                           id="name"
                           onChange= {(e)=>handleChange(e,'name')}
                           value = {data.name}
-                          className="inputLogin"
+                          className="inputLogin "
                           />
                           
                           <FormFeedback>
@@ -285,100 +287,130 @@ const Signup = () => {
                           </FormFeedback>
       
                       
-                          <Label htmlFor="email" className="mt-2 mb-2" >Enter Email</Label>
+                    </Col>
+                    <Col md ={6}>
+                      
+
+                    <Label htmlFor="email" className="mt-2 mb-2" >Email</Label>
                           <Input type="email" placeholder="Enter email" 
                            invalid={error.errors?.response?.data?.email ? true : false}
                           id="email"
                           onChange= {(e)=>handleChange(e,'email')}
                           value = {data.email} 
-                          className="inputLogin" />
+                          className="inputLogin " />
                           
                           <FormFeedback>
                           {error.errors?.response?.data?.email ? true : false}
                           </FormFeedback>
-                      
-      
-                          <Label htmlFor="password" className="mt-2 mb-2" >Enter Password</Label>
+
+
+                    </Col>
+                  </Row>
+
+                  <Row>
+                    <Col md ={6}>
+                    <Label htmlFor="password" className="mt-2 mb-2">Password</Label>
                           <Input type="password" 
                            placeholder="Enter Password" 
                            id="password"
                            invalid={error.errors?.response?.data?.password ? true : false}
                           onChange= {(e)=>handleChange(e,'password')}
                           value = {data.password} 
-                          className="inputLogin"/>
+                          className="inputLogin "/>
                            
                           <FormFeedback>
                           {error.errors?.response?.data?.password ? true : false}
                           </FormFeedback>
-                      
-      
-                          <Label htmlFor="age" className="mt-2 mb-2" >Enter Age</Label>
+                    </Col>
+                    <Col md ={6}>
+
+
+                    <Label htmlFor="age" className="mt-2 mb-2" > Age</Label>
                           <Input type="text" 
                           placeholder="Enter age" 
                           invalid={error.errors?.response?.data?.age ? true : false}
                           id="age"
                           onChange= {(e)=>handleChange(e,'age')}
                           value = {data.age} 
-                          className="inputLogin"/> 
+                          className="inputLogin "/> 
                          
                           <FormFeedback>
                           {error.errors?.response?.data?.age ? true : false}
                           </FormFeedback>
-                      
-                     
-                          <Label htmlFor="weight" className="mt-2 mb-2" >Enter weight</Label>
+
+                    </Col>
+                  </Row>
+
+
+                  <Row>
+                    <Col md ={6}>
+
+                    <Label htmlFor="weight" className="mt-2 mb-2" >weight</Label>
                           <Input type="text" 
                           placeholder="Enter weight" 
                           invalid={error.errors?.response?.data?.weight ? true : false} 
                           id="weight"
                           onChange= {(e)=>handleChange(e,'weight')}
                           value = {data.weight} 
-                          className="inputLogin"/> 
+                          className="inputLogin "/> 
                          
                           <FormFeedback>
                           {error.errors?.response?.data?.weight ? true : false}
                           </FormFeedback>
-                      
-      
-                          <Label htmlFor="height" className="mt-2 mb-2" >Enter Height</Label>
+
+
+                    </Col>
+                    <Col md ={6}>
+
+
+                    <Label htmlFor="height" className="mt-2 mb-2" > Height</Label>
                           <Input type="text" 
                           placeholder="Enter Height" 
                           invalid={error.errors?.response?.data?.height ? true : false}
                           id="height"
                           onChange= {(e)=>handleChange(e,'height')}
                           value = {data.height} 
-                          className="inputLogin"/>
+                          className="inputLogin " />
                        
                           <FormFeedback>
                           {error.errors?.response?.data?.height ? true : false}
                           </FormFeedback>
 
-                       
-                         <Label htmlFor="contact" className="mt-2 mb-2" >Enter contact</Label>
+
+                    </Col>
+                  </Row>
+
+
+
+                  <Row>
+                    <Col md ={6}>
+                    <Label htmlFor="contact" className="mt-2 mb-2" > contact</Label>
                          <Input type="text" 
                           placeholder="Enter Contact" 
                           invalid={error.errors?.response?.data?.contact ? true : false}
                           id="contact"
                           onChange= {(e)=>handleChange(e,'contact')}
                           value = {data.contact} 
-                          className="inputLogin"/> 
+                          className="inputLogin "/> 
                           <FormFeedback>
                           {error.errors?.response?.data?.contact ? true : false}
                           </FormFeedback>
-                      
-                      
-                          <Label htmlFor="address" className="mt-2 mb-2" >Enter Address</Label>
+                    </Col>
+                    <Col md ={6}>
+                    <Label htmlFor="address" className="mt-2 mb-2" > Address</Label>
                           <Input type="text" 
                           placeholder="Enter Address" 
                           invalid={error.errors?.response?.data?.address ? true : false}
                           id="address"
                           onChange= {(e)=>handleChange(e,'address')}
                           value = {data.address} 
-                          className="inputLogin"/>
+                          className="inputLogin "/>
                           <FormFeedback>
                           {error.errors?.response?.data?.address ? true : false}
                           </FormFeedback>
-              
+                    </Col>
+                  </Row>
+
                       <Container className="text-center mt-2 mb-2">
                   <Button color="dark" className="btnLogin">Register</Button>
                   <Button color="secondary" className="ms-2 btnLogin" type="reset" value="Reset">Reset</Button>
