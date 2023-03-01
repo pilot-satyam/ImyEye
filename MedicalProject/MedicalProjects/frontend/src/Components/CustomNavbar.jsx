@@ -56,8 +56,8 @@ const CustomNavbar =(props)=> {
             <div className="me-auto space dropdown navbar-dropdown">
   <button className="dropbtn text-white bg-dark">ADDRESS</button>
   <div className="dropdown-content " id='address_dropdown'>
-    <a href="/address" id="address_options">Branch 1</a>
-    <a href="/branch2" id="">Branch 2</a>
+    <a href="/address" id="address_options_1">Branch 1</a>
+    <a href="/branch2" id="address_options_2">Branch 2</a>
   </div>
 </div>
 &nbsp;&nbsp;&nbsp;
@@ -65,10 +65,10 @@ const CustomNavbar =(props)=> {
 
 <div className="me-auto space dropdown navbar-dropdown">
   <button className="dropbtn text-white bg-dark">TREATMENT</button>
-  <div className="dropdown-content " id='address_dropdown'>
-    <a href="/cornea" id="address_options"> CORNEA</a>
-    <a href="/retina" id="">RETINA</a>
-    <a href="/cataract" id=""> CATARACT</a>
+  <div className="dropdown-content " id='treatment_dropdown'>
+    <a href="/cornea" id="treatment_options_1"> CORNEA</a>
+    <a href="/retina" id="treatment_options_2">RETINA</a>
+    <a href="/cataract" id="treatment_options_3"> CATARACT</a>
   </div>
 </div>
           
