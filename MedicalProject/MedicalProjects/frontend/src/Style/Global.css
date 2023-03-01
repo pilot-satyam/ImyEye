@@ -12,7 +12,9 @@
   transform:scale(1.05);
 } */
 
-
+#news_event{
+  width:101px;
+}
 .buttonStyle {
   font-size: 18px;
   display: inline-block;
