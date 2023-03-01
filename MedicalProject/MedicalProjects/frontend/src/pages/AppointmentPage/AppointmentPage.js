@@ -60,7 +60,7 @@ function AppointmentPage() {
   };
 
   return (
-    <div>
+    <div className="mt-5">
       <h1>Book an Appointment</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
