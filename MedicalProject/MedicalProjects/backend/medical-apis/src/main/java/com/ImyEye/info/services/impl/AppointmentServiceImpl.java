@@ -52,6 +52,8 @@ public class AppointmentServiceImpl implements AppointmentService {
     public AppointmentDto updateAppointment(AppointmentDto aDto, Integer Id) {
         Appointment appointment = this.appointmentRepo.findById(Id).orElseThrow(()->new ResourceNotFoundException("Appointment", "Id", Id));
         appointment.setAddedDate(aDto.getAddedDate());
+        appointment.setDate(aDto.getDate());
+        appointment.setTime(aDto.getTime());
         Appointment updatedAppointment = this.appointmentRepo.save(appointment);
         return this.modelMapper.map(updatedAppointment,AppointmentDto.class);
     }

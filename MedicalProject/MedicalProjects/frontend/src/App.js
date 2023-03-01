@@ -27,7 +27,7 @@ import ProfileInfo from './pages/user-routes/ProfileInfo';
 import NewFeed from './pages/DoctorList/NewFeed';
 import AddPrescription from './Components/AddPrescription';
 import Doctors from './pages/Doctors';
-import { AppointmentPage } from './pages/AppointmentPage/AppoitmentPage';
+import AppointmentPage from './pages/AppointmentPage/AppointmentPage';
 import Edit from './pages/Edit'
 import { Navigate } from 'react-router-dom';
 

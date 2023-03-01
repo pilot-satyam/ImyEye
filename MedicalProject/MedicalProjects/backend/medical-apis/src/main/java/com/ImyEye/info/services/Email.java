@@ -1,16 +1,14 @@
 package com.ImyEye.info.services;
 
-import java.net.PasswordAuthentication;
 import java.util.Properties;
 
-import javax.mail.Authenticator;
-import javax.mail.Message;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-
 import org.springframework.stereotype.Service;
+
+import jakarta.mail.Authenticator;
+import jakarta.mail.Message;
+import jakarta.mail.Session;
+import jakarta.mail.internet.InternetAddress;
+import jakarta.mail.internet.MimeMessage;
 
 @Service
 public class Email {
@@ -19,7 +17,7 @@ public class Email {
 
         boolean f = false;
 
-        String from="satyamsrivastaviit@gmail.com";
+        String from="satyam99srivastava@gmail.com";
 
         //variable for gmail
         String host = "smtp.gmail.com";
@@ -37,8 +35,8 @@ public class Email {
         //Step 1: to get the session object
         Session session = Session.getInstance(properties,new Authenticator(){
             @Override
-            protected javax.mail.PasswordAuthentication getPasswordAuthentication(){
-                return new javax.mail.PasswordAuthentication("satyamsrivastaviit@gmail.com", "Airbus@a320");
+            protected jakarta.mail.PasswordAuthentication getPasswordAuthentication(){
+                return new jakarta.mail.PasswordAuthentication("satyam99srivastava@gmail.com", "Satyam7890@");
             }
         });
         session.setDebug(true);
@@ -58,7 +56,7 @@ public class Email {
             //send
 
             //Step3 : send the message using Transport class
-            Transport.send(m);
+            // Transport.send(m);
             System.out.println("Sent Succeessss ....");
             f = true;
 

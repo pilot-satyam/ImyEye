@@ -59,6 +59,9 @@ public class User implements UserDetails {
      //address
      @Column(nullable = false)
      private String address;
+
+     // @Column(name="reset_password_token")
+     // private String resetPasswordToken;
      
 //     @ManyToOne(mappedBy = "doctor",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
      // @ManyToOne
