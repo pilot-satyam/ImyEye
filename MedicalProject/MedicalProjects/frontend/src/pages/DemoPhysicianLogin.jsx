@@ -18,7 +18,7 @@ import Base from "../Components/Base";
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import DoctorSignup from './DoctorSignup';
-import '../Style/login.css';
+
 
 const PhysicianLogin = () =>{
     return(

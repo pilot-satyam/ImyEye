@@ -38,8 +38,8 @@ const CustomNavbar =(props)=> {
     <Navbar bg="dark" expand="lg"  variant="dark" fixed="top"  >
    
       <Container>
-        <img src ="favicon-32x32.png" alt="Image of eye for the navBar" className='rounded-circle'/>
-
+        <img src ="favicon-32x32.png" alt="navBarIg" className='rounded-circle'/>
+        
         <Navbar.Brand href="/home">I-myEYE</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         {/* basic-navbar-nav */}
