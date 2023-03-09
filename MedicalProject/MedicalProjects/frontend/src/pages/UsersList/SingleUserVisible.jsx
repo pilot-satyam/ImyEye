@@ -31,6 +31,7 @@ const SingleUserVisible=()=>{
       <br/>
       <Link to="/">Home</Link> / {users && (<Link to="">{users.name}</Link>)}
     
+      {users && 
       <Table striped bordered hover>
       <thead>
         <tr>
@@ -65,7 +66,7 @@ const SingleUserVisible=()=>{
         </tr>
       </tbody>
       </Table>
-           
+}
     </Container>
   )
 }
