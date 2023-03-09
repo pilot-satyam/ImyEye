@@ -27,7 +27,7 @@ function NewFeed() {
 
    return(
         
-    <div className='container-fluid'>
+    <div className='container-fluid mt-5'>
         <Row>
             <Col md={{
                 size:10,

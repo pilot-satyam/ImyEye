@@ -46,6 +46,7 @@ import Cataract from './Treatment/Cataract';
 import Retina from './Treatment/Retina';
 import Cornea from './Treatment/Cornea';
 import PrescriptionList from './pages/PrescriptionList/PrescriptionList';
+import Doctor from './pages/DoctorList/Doctor';
 
 
 function App() {

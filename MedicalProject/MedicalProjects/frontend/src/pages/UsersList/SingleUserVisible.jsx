@@ -3,10 +3,11 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import { Card, CardBody, CardText, Col, Container, Row } from 'reactstrap'
+import { Card, CardBody, CardHeader, CardText, Col, Container, Row } from 'reactstrap'
 import { loadUser } from '../../services/user-service'
 // import { loadDoctor } from '../services/doctor-service'
 // import Base from '../Components/Base
+import Table from 'react-bootstrap/Table';
 
 const SingleUserVisible=()=>{
   const {userId} = useParams()
@@ -25,61 +26,46 @@ const SingleUserVisible=()=>{
   },[userId])
 
   return (
-    <Container className='mt-4'>
+   
+    <Container className='mt-5'>
+      <br/>
       <Link to="/">Home</Link> / {users && (<Link to="">{users.name}</Link>)}
-      <Row>
-        <Col md={{
-          size:12
-        }}>
-          {users && 
-            <Card className='mt-3'>
-              <CardBody>
-                <CardText>
-                  <h3>
-                  User Details :<b>{users.name}</b>
-                  </h3>
-                </CardText>
-                <CardText>
-                <h3>
-                User Id :
-                  {users.id}
-                  </h3>
-                </CardText>
-                <CardText>
-                  <h3>
-                  User Email :
-                {users.email}
-                  </h3>
-                </CardText>
-                <CardText>
-                  <h3>
-                    User Height :
-                    {users.height}
-                  </h3>
-                </CardText>
-                <CardText>
-                  <h3>
-                   User Age:
-                   {users.age}
-                  </h3>
-                </CardText>
-                <CardText>
-                  <h3>
-                   User Weight:
-                   {users.weight}
-                  </h3>
-                </CardText>
-                <CardText>
-                  <h3>
-                    User Address:
-                    {users.address}
-                  </h3>
-                </CardText>
-              </CardBody>
-            </Card>
-          }
-        </Col>
-      </Row>
+    
+      <Table striped bordered hover>
+      <thead>
+        <tr>
+        User Details :<b>{users.name}</b>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>User Id :</td>
+          <td>{users.id}</td>
+        </tr>
+        <tr>
+          <td>User Email :</td>
+          <td>{users.email}</td>
+        </tr>
+        <tr>
+          <td> User Height :</td>
+          <td>{users.height}</td>
+        </tr>
+        <tr>
+          <td>User Age:</td>
+          <td> {users.age}</td>
+        </tr>
+        <tr>
+          <td> User Weight:</td>
+          <td>{users.weight}</td>
+        </tr>
+        <tr>
+          <td>User Address:</td>
+          <td>{users.address}</td>
+        </tr>
+      </tbody>
+      </Table>
+           
     </Container>
   )
 }
