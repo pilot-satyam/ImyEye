@@ -7,6 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { doLogout, getCurrentUserDetail,isLoggedIn } from '../auth';
+import Image from "./Image";
 import '../Style/NavBar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
@@ -38,7 +39,7 @@ const CustomNavbar =(props)=> {
     <Navbar bg="dark" expand="lg"  variant="dark" fixed="top"  >
    
       <Container>
-        <img src ="favicon-32x32.png" alt="navBarIg" className='rounded-circle'/>
+          <img src ={Image.testImg} alt="navBarIg" className='rounded-circle'/>
         
         <Navbar.Brand href="/home">I-myEYE</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
