@@ -4,9 +4,7 @@
   import { useParams } from 'react-router-dom'
   import { Button, Card, CardBody, CardFooter, Col, Container, Input, Row, Table } from 'reactstrap'
   import ViewUserProfile from '../../Components/ViewUserProfile'
-  // import Base from '../../components/Base'
   import userContext from '../../context/userContext'
-  // import { getUser } from '../../services/user-service'
   import { loadUser } from '../../services/user-service'
 
 
