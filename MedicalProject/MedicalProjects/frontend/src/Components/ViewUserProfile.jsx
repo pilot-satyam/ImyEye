@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
-import { Card, CardBody, CardFooter, Col, Container, Row, Table,Button } from 'reactstrap'
+import { Card, CardBody, CardFooter, Col, Container, Row, Table,Button, CardHeader } from 'reactstrap'
 import { getCurrentUserDetail, isLoggedIn } from '../auth'
 import { updateUser } from '../services/user-service'
 //making component reusable
@@ -16,12 +16,15 @@ const ViewUserProfile = ({user,updateProfileClick}) => {
 
   return (
     <div>
-      <Card className='mt-2 border-0 rounded-0 shadow-sm'>
-          <CardBody>
-            <h3 className='text-uppercase'>User Information</h3>
+      <Card className='mt-5 border-0 rounded-0 shadow-sm'>
+        <CardHeader>
+          <h3 className='text-uppercase text-center'>User Information</h3>
             <Container className='text-center'>
-              <img style={{maxWidth:'250px',maxHeight:'250px'}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJxA5cTf-5dh5Eusm0puHbvAhOrCRPtckzjA&usqp=CAU" alt="user profile picture" className='image-fluid rounded-circle' />
+              <img style={{maxWidth:'150px',maxHeight:'150px'}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJxA5cTf-5dh5Eusm0puHbvAhOrCRPtckzjA&usqp=CAU" alt="user profile picture" className='image-fluid rounded-circle' />
             </Container>
+        </CardHeader>
+          <CardBody>
+           
             <Table responsive striped hover bordered={true} className='mt-5'>
               <tbody>
                 <tr>
@@ -90,6 +93,7 @@ const ViewUserProfile = ({user,updateProfileClick}) => {
                 </tr>
               </tbody>
             </Table>
+          </CardBody>
             {/* if current user is logged in then only the user can update the details */}
            {currentUser ? (currentUser.id == user.id) ? (
              <CardFooter className='text-center'>
@@ -97,7 +101,7 @@ const ViewUserProfile = ({user,updateProfileClick}) => {
          </CardFooter>) 
          : '' 
          : ''}
-          </CardBody>
+         
         </Card>
     </div>
   )

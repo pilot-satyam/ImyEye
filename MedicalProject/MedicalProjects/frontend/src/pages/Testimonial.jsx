@@ -12,10 +12,10 @@ const Testimonial = ({ author, text, image }) => (
 
 const Testimonials = () => {
   const [testimonials] = useState([
-    { author: 'Amit Chaudhary', text: 'Best hospital,very good & dedicated staff suported me alot, I had my checkup 1 year ago now I have good vision. I visited so many times very cooperative staff!', image: 'person4.jpg' },
-    { author: 'Sanmati Porlekar', text: 'Best hospital,very good & dedicated staff suported me alot, I had my checkup 1 year ago now I have good vision. I visited so many times very cooperative staff!', image: 'person2.jpg'},
-    { author: 'Satyam Srivastva ', text: 'Best hospital,very good & dedicated staff suported me alot, I had my checkup 1 year ago now I have good vision. I visited so many times very cooperative staff!', image: 'person1.jpg' },
-    { author: 'Lavish Shrimali ', text: 'Best hospital,very good & dedicated staff suported me alot, I had my checkup 1 year ago now I have good vision. I visited so many times very cooperative staff!', image: 'person3.jpg' }
+    { author: 'Amit Chaudhary', text: 'Best hospital,very good & dedicated staff suported me alot, I had my checkup 1 year ago now I have good vision. I visited so many times very cooperative staff!', image: "../images/person1.jpg" },
+    { author: 'Sanmati Porlekar', text: 'Best hospital,very good & dedicated staff suported me alot, I had my checkup 1 year ago now I have good vision. I visited so many times very cooperative staff!', image: "../images/person2.jpg"},
+    { author: 'Satyam Srivastva ', text: 'Best hospital,very good & dedicated staff suported me alot, I had my checkup 1 year ago now I have good vision. I visited so many times very cooperative staff!', image: "../images/person3.jpg"},
+    { author: 'Lavish Shrimali ', text: 'Best hospital,very good & dedicated staff suported me alot, I had my checkup 1 year ago now I have good vision. I visited so many times very cooperative staff!', image:  "../images/person4.jpg"}
     
   ]);
 

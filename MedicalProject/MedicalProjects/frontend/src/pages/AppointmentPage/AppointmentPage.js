@@ -7,7 +7,8 @@ import { loadAllDoctors } from "../../services/doctor-service";
 import { getCurrentUserDetail } from "../../auth";
 import { createAppointment } from "../../services/appointment-service";
 import { toast } from "react-toastify";
-import { Card, CardBody, CardText, Container } from "reactstrap";
+import { Card, CardBody, CardFooter, CardHeader, CardText, Container } from "reactstrap";
+import { MDBRow, MDBCol } from 'mdb-react-ui-kit';
 
 function AppointmentPage() {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -60,16 +61,29 @@ function AppointmentPage() {
   };
 
   return (
-    <div className="mt-5">
-      <h1>Book an Appointment</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <label htmlFor="patientId">Patient ID:</label>
+
+
+    <MDBRow>
+    <MDBCol md='8' >
+
+
+
+    <div className="mt-5" style={{width:"60%", height:"70%", marginLeft:"150px"}}>
+      <Card >
+        <CardHeader className="text-center">
+        <h2>Book an Appointment</h2>
+        </CardHeader>
+        <CardBody>
+
+
+        <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="text-center">
+          <label htmlFor="patientId" >Patient ID:</label><br/>
           <input id="patientId" type="text" {...register("patientId", { required: true })} />
           {errors.patientId && <span>This field is required</span>}
         </div>
-        <div className="my-3">
-          <label htmlFor="doctor">Select Doctor</label>
+        <div className="my-3 text-center">
+          <label htmlFor="doctor">Select Doctor</label><br/>
           <select
             id="doctor"
             name="doctorId"
@@ -85,17 +99,17 @@ function AppointmentPage() {
             ))}
           </select>
         </div>
-        <div>
-          <Card>
-            <CardText className="text-center"><h3>Appointment Date:</h3></CardText>
-          <CardBody>
+        <div className="text-center">
+         
+           <label>Appointment Date:</label><br/>
+          
           <Calendar
             value={selectedDate}
             onChange={setSelectedDate}
             tileDisabled={({ date, view }) => view === 'month' && isDateDisabled(date)}
           />
-          </CardBody>
-          <CardText className="text-center">Appointment Time:
+         
+         <label className="mb-2 mt-2">Appointment Time:</label><br/>
           <TimePicker
             value={selectedTime}
             onChange={setSelectedTime}
@@ -105,17 +119,39 @@ function AppointmentPage() {
             maxTime='18:00'
             interval={30}
           /> 
-          </CardText>
-          <CardBody>
-          <button type="submit" className="btn btn-success">Book Appointment</button>
-          </CardBody>
-          </Card>
+          <br/>
+         <div className="text-center mt-4">
+         <button type="submit" className="btn btn-success">Book Appointment</button>
+
+         </div>
+         
+         
+         
         </div>
         {/* <Container className="text-center">
         <button type="submit" className="btn btn-success">Book Appointment</button>
         </Container> */}
         </form>
+
+
+        </CardBody>
+     
+      </Card>
+     
+     
     </div>
+
+
+
+
+    </MDBCol>
+    <MDBCol md='4' className ="text-center text-md-start d-flex flex-column justify-content-center">
+    <img src ="appoitment.webp"></img>
+    </MDBCol>
+  </MDBRow>
+
+    
+    
   );
 }
 export default AppointmentPage;
