@@ -8,7 +8,7 @@ function FeedPlusMenu() {
   return (
     <Base>
     <Container className='mt-5'>
-    <Row>
+    <Row className='mt-5'>
         <Col md={2} className='pt-3'>
         <DoctorSideMenu />
         </Col>

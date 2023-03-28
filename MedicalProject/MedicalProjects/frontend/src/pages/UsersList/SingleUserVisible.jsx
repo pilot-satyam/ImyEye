@@ -27,16 +27,19 @@ const SingleUserVisible=()=>{
 
   return (
    
-    <Container className='mt-5'>
+    <Container className='mt-5' style={{width:"50%",height:"50%"}}>
       <br/>
       <Link to="/">Home</Link> / {users && (<Link to="">{users.name}</Link>)}
     
       {users && 
       <Table striped bordered hover>
       <thead>
-        <tr>
-        User Details :<b>{users.name}</b>
-        </tr>
+        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>{users.name}</b></th>
+       
+        
+       
       </thead>
 
       <tbody>
@@ -72,4 +75,3 @@ const SingleUserVisible=()=>{
 }
 
 export default SingleUserVisible
-

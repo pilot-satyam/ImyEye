@@ -28,7 +28,7 @@ useEffect(()=>{
 
   return (  
      <Base>
-<Container className='mt-3'>
+<Container className='mt-5'>
     <Row>
         <Col md={2} className='pt-3'>
         <DoctorSideMenu />

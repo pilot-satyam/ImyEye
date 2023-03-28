@@ -4,7 +4,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Button, Card,CardBody, CardFooter, CardHeader, CardText } from 'reactstrap'
+import { Button, Card,CardBody, CardFooter, CardHeader, Table } from 'reactstrap'
 import { getCurrentUserDetail, isLoggedIn } from '../../auth'
 
 function Doctor({doctor={id:-1,name:"THis is default doctor",qualification:"Default qualification"}}){
@@ -17,25 +17,82 @@ function Doctor({doctor={id:-1,name:"THis is default doctor",qualification:"Defa
   },[])
 
   return (
-    <div className='col d-flex justify-content-center'>
-    <Card className='border-1 shadow-sm  mt-5 centerIt' style={{width:"50%"}}>
-      <CardHeader> <h1 className='centerIt'>{doctor.name}</h1></CardHeader>
-      <CardBody>
- 
-    <CardText>
-      Qualification :  {doctor.qualification}<br></br>
-      Experience :  {doctor.experience}<br></br>
-      Fees : Rs. {doctor.fees}
-    </CardText>
-      </CardBody>
-      <CardFooter>
-      <div className='centerIt'>
-          <Link className='btn btn-secondary' to={'/doctors/'+doctor.doctorId}>Details Of Doc</Link>
-          {/* {isLoggedIn && (user.id === doctor.user.id ? <Button color='danger' className='ms-2'>Delete</Button> : '')} */}
-        </div>
-      </CardFooter>
-</Card>
-</div>
+  
+    
+
+
+
+<div className="container d-flex justify-content-center align-items-center">
+             
+             <div className="card">
+
+              {/* <div className="upper">
+
+                <img src="https://i.imgur.com/Qtrsrk5.jpg" className="img-fluid"/>
+                
+              </div> */}
+
+              <div className="user text-center">
+
+                <div className="profile mt-3" >
+
+                  <img src="https://i.imgur.com/JgYD2nQ.jpg" className="rounded-circle" width="80"/>
+                  
+                </div>
+
+              </div>
+
+
+              <div className="mt-2 text-center">
+
+                <h2 className="mb-0">{doctor.name}</h2>
+                <span className="text-muted d-block mb-2">Doctor@IMyCare</span>
+
+                <button className="btn btn-primary btn-sm">
+                  <Link style={{textDecoration:"none", color:"white"}} to={'/doctors/'+doctor.doctorId}>Details Of Doc</Link>
+                </button>
+
+
+                <div className="d-flex justify-content-between align-items-center mt-4 px-1">
+
+
+                  <Table hover stripped >
+                    <tr>
+                      <td>
+                      Qualification
+                      </td>
+                      <td>
+                      {doctor.qualification}
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                      Experience
+                      </td>
+                      <td>
+                      {doctor.experience} 
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                      Fees
+                      </td>
+                      <td>
+                      Rs. {doctor.fees}
+                      </td>
+                    </tr>
+                  </Table>
+                  
+                </div>
+                
+              </div>
+               
+             </div>
+
+           </div>
+
   )
 }
 
