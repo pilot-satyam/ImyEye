@@ -2,11 +2,9 @@
   import { useState } from 'react'
   import { useEffect } from 'react'
   import { useParams } from 'react-router-dom'
-  import { Button, Card, CardBody, CardFooter, Col, Container, Input, Row, Table } from 'reactstrap'
+  import { Button, Card, CardBody, CardFooter, CardHeader, Col, Container, Input, Row, Table } from 'reactstrap'
   import ViewUserProfile from '../../Components/ViewUserProfile'
-  // import Base from '../../components/Base'
   import userContext from '../../context/userContext'
-  // import { getUser } from '../../services/user-service'
   import { loadUser } from '../../services/user-service'
 
 
@@ -65,14 +63,15 @@
     //upate profile
     const updateUserProfile = () => {
       return (
-        <div>
+        <div className='mt-5'>
           <Card className='mt-2 border-0 rounded-0 shadow-sm'>
-            <CardBody>
-              <h3 className='text-uppercase'>user Information</h3>
-
+            <CardHeader>
+              <h3 className='text-uppercase text-center'>user Information</h3>
               <Container className='text-center'>
-                <img style={{ maxWidth: '200px', maxHeight: '200px' }} src={user.image ? user.image : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJxA5cTf-5dh5Eusm0puHbvAhOrCRPtckzjA&usqp=CAU'} />
+                <img style={{ maxWidth: '150px', maxHeight: '150px' }} src={user.image ? user.image : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJxA5cTf-5dh5Eusm0puHbvAhOrCRPtckzjA&usqp=CAU'} />
               </Container>
+            </CardHeader>
+            <CardBody>
               <Table responsive striped hover bordered={true} className='text-center mt-5'>
                 <tbody>
                   <tr>
