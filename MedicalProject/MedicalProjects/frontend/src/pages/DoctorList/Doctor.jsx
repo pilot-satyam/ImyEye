@@ -36,7 +36,7 @@ function Doctor({doctor={id:-1,name:"THis is default doctor",qualification:"Defa
 
                 <div className="profile mt-3" >
 
-                  <img src="https://i.imgur.com/JgYD2nQ.jpg" className="rounded-circle" width="80"/>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJxA5cTf-5dh5Eusm0puHbvAhOrCRPtckzjA&usqp=CAU" className="rounded-circle" width="80"/>
                   
                 </div>
 
