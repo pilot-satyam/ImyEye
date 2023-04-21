@@ -19,7 +19,7 @@
     useEffect(() => {
       loadUser(userId).then(data => {
         console.log(data);
-        setUser({ ...data })
+          ({ ...data })
       })
     }, [])
 

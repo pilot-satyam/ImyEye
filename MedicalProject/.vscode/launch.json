@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MedicalApisApplication<medical-apis>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ImyEye.info.MedicalApisApplication",
+            "projectName": "medical-apis",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
